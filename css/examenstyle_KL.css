@@ -16,6 +16,11 @@
 
 .fixedNavElement {}
 
+.lanLogo
+{
+	width: 20%;
+}
+
 .sideMenuIcon 
 {
 	visibility: hidden;
@@ -47,7 +52,7 @@ nav > ul > li:last-child > a
 }
 */
 
-@media only screen and (max-width: 768px)
+@media only screen and (max-width: 800px)
 {
 	[class*="col-"] 
 	{
@@ -64,6 +69,13 @@ nav > ul > li:last-child > a
 		visibility: visible;
 		width: 48px;
 		height: 48px;
+	}
+	[class*="lanLogo"]
+	{
+		width: 70%;
+		margin-left: 15%;
+		margin-right: 15%;
+		margin-top: 10%
 	}
 }
 
@@ -105,7 +117,8 @@ nav > ul > li
 	display: inline-block;
 	text-align: center;
 	font-family: Georgia;
-	width: 100px;
+	font-weight: bold;
+	width: 130px;
 }
 
 
@@ -129,4 +142,10 @@ nav > ul > li > img
 	padding: 10px;
 }
 
+nav > hr
+{
+	color: #00DBC4;
+	background-color: #00DBC4;
+	height: 4px;
+}
 
