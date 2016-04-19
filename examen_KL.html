@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!--
+/****************************************************/
+/*  Fichier......................: index.html       */
+/*  Type.........................: Document HTML 5  */
+/*  Titre........................: Exam             */
+/*  Auteur.......................: Kenny Lemay      */
+/*  Date de création.............: 2016-03-11       */
+/*  Date de mise en ligne........: 2016-03-11       */
+/*  Date de mise à jour..........: 2016-03-11       */
+/****************************************************/
+/*  Web page made for the exam on the fidji island  */
+/****************************************************/
+-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="description" content="Come see fidji! Touristic information about fidji" /> 
+		<link rel="stylesheet" href="css/examenstyle_KL.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Les iles Fidji</title>
+	</head> 
+	
+	<body>
+	
+	<script>
+	
+		var MENU_inflated = false;
+		function inflatemenu()
+		{
+			var menuItems = document.getElementsByClassName("fixedNavElement");
+			var menuButton = document.getElementsByClassName("sideMenuIcon");
+			
+			if (MENU_inflated == false)
+			{
+				for (var n=0, max=menuItems.length; n < max; n++) 
+				{
+					menuItems[n].style.visibility = "visible";
+					menuItems[n].style.width = "100%";
+
+					menuButton[0].style.backgroundColor = "#81807C";
+					
+					MENU_inflated = true;
+				}
+			}
+			else
+			{
+				for (var n=0, max=menuItems.length; n < max; n++) 
+				{
+
+					menuItems[n].style.visibility = "";
+					menuItems[n].style.width = "";
+					
+					menuButton[0].style.backgroundColor = "";
+					
+					MENU_inflated = false;
+				}
+			}
+        }
+		
+		
+		var mq = window.matchMedia("(min-width: 768px)");
+		mq.addListener(WidthChange);
+		WidthChange(mq);
+		
+		
+		//http://www.sitepoint.com/javascript-media-queries/
+		
+		function WidthChange(mq) {
+			if (mq.matches) {
+				if(MENU_inflated == true)
+				{
+					var menuItems = document.getElementsByClassName("fixedNavElement");
+					var menuButton = document.getElementsByClassName("sideMenuIcon");
+
+					
+					for (var n=0, max=menuItems.length; n < max; n++) 
+					{
+						menuItems[n].style.visibility = "";
+						menuItems[n].style.width = "";
+						
+						menuButton[0].style.backgroundColor = "";
+						
+						MENU_inflated = false;
+					}
+				}
+			}
+		}
+	
+	</script>
+		
+		<!-- Nav bar below header -->
+		<nav>
+			<ul>
+				<li class="sideMenuIcon"><img src="img/menuburger.png" width="100%" height="100%"
+				onclick="inflatemenu()"/></li><!--
+				--><li class="fixedRightNav"><a href="">Inscription</a></li><!--
+				--><li class="fixedNavElement"><a href="">Accueil</a></li><!--
+				--><li class="fixedNavElement"><a href="">LAN</a></li><!--
+				--><li class="fixedNavElement"><a href="">Équipe</a></li><!--
+				--><li class="fixedNavElement"><a href="">Tournois</a></li><!--
+				--><li class="fixedNavElement"><a href="">Contact</a></li><!--
+				-->
+			</ul>
+		</nav>
+		
+		
+</html> 
