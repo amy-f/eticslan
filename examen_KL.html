@@ -21,7 +21,11 @@
 		<title>Les iles Fidji</title>
 	</head> 
 	
-	<body>
+	<body style="background-color:#000000;
+	background-image:url(img/controller2.bmp);
+	background-size:100%;
+	background-position: 0px 48px;
+	background-repeat: no-repeat;">
 	
 	<script>
 	
@@ -30,6 +34,7 @@
 		{
 			var menuItems = document.getElementsByClassName("fixedNavElement");
 			var menuButton = document.getElementsByClassName("sideMenuIcon");
+			var body = document.getElementsByTagName("body");
 			
 			if (MENU_inflated == false)
 			{
@@ -37,9 +42,12 @@
 				{
 					menuItems[n].style.visibility = "visible";
 					menuItems[n].style.width = "100%";
-
+					menuItems[n].style.borderTop = "1pt solid #00DBC4";
+					
 					menuButton[0].style.backgroundColor = "#81807C";
 					
+					body[0].style.backgroundPosition = "0px 293px";
+											
 					MENU_inflated = true;
 				}
 			}
@@ -50,8 +58,11 @@
 
 					menuItems[n].style.visibility = "";
 					menuItems[n].style.width = "";
+					menuItems[n].style.borderTop = "";
 					
 					menuButton[0].style.backgroundColor = "";
+					
+					body[0].style.backgroundPosition = "";
 					
 					MENU_inflated = false;
 				}
@@ -59,7 +70,7 @@
         }
 		
 		
-		var mq = window.matchMedia("(min-width: 768px)");
+		var mq = window.matchMedia("(min-width: 800px)");
 		mq.addListener(WidthChange);
 		WidthChange(mq);
 		
@@ -72,15 +83,18 @@
 				{
 					var menuItems = document.getElementsByClassName("fixedNavElement");
 					var menuButton = document.getElementsByClassName("sideMenuIcon");
-
+					var body = document.getElementsByTagName("body");
 					
 					for (var n=0, max=menuItems.length; n < max; n++) 
 					{
 						menuItems[n].style.visibility = "";
 						menuItems[n].style.width = "";
+						menuItems[n].style.borderTop = "";
 						
 						menuButton[0].style.backgroundColor = "";
 						
+						body[0].style.backgroundPosition = "";
+
 						MENU_inflated = false;
 					}
 				}
@@ -102,7 +116,16 @@
 				--><li class="fixedNavElement"><a href="">Contact</a></li><!--
 				-->
 			</ul>
+			
+			<hr/>
 		</nav>
+		
+		<header>
+				
+			<img src="img/logolan.png" width="100%" class="lanLogo"/>
+		
+		</header>
+		
 		
 		
 </html> 
