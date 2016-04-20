@@ -125,6 +125,76 @@ nav > hr
 }
 
 
+/*Footer CSS*/
+/************/
+
+footer
+{
+	background-color:#3C4140;
+	width:100%;
+	padding-left:30px;
+	padding-top:30px
+}
+
+.footerLeftSection
+{
+	float:left;
+	width:30%;
+}
+	
+.footerLeftSection > img
+{
+	width:55%;
+}
+
+.footerLeftSection > p
+{
+	font-size:9pt;
+	color:#FFFFFF;
+	font-weight:bold;
+	font-family:Georgia;
+	text-justify:inter-word;
+	text-align: justify;
+}
+	
+.footerMiddleSection
+{
+	list-style-type: none;
+	font-size:9pt;
+	color:#FFFFFF;
+	font-weight:bold;
+	font-family: Georgia;
+	margin-left:8%;
+	float:left;
+	width:22%;
+}
+	
+.footerMiddleSection > li:first-child
+{
+	font-size:12pt;
+}
+	
+.footerRightSection
+{
+	margin-left:15%;
+	float:left;
+	width:25%;
+}
+	
+.footerRightSection > p
+{
+	font-weight:bold;
+	font-family: Georgia;color:#FFFFFF;
+	font-size:12pt;
+	display: inline-block;
+}
+	
+.footerRightSection > div > img
+{
+	width:10%;
+	display:inline-block;
+}
+
 /*Screen adjustements*/
 /*********************/
 @media only screen and (max-width: 800px)
