@@ -29,12 +29,26 @@
 	<link rel="stylesheet" href="css/style.css" />
 
 	<style>
+		
+		@media only screen and (max-width: 800px)
+		{
 			
+		}
 	</style>
 	
 </head>
-    <body style="background-color:#00887A"><!-- style="background-color:#3C4140" -->
+    <body style="background-color:#3C4140"><!-- style="background-color:#3C4140" -->
 		<?php include 'php\navbar.php' ?>
+		
+		
+		<div class="backgroundDiv">
+		
+		
+			<?php include 'php\header.php' ?>
+		
+		
+		</div>
+		
 		
 		<?php include 'php\footer.php' ?>	
     </body>

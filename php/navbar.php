@@ -16,5 +16,6 @@
 				-->
 			</ul>
 			
-			<hr/>
 		</nav>
+		
+		<hr class="afterHeader"/>

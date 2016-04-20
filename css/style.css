@@ -117,7 +117,7 @@ nav > ul > li > img
 }
 
 /*Teal bar under nav*/
-nav > hr
+.afterHeader
 {
 	color: #00DBC4;
 	background-color: #00DBC4;
@@ -127,6 +127,13 @@ nav > hr
 
 /*Footer CSS*/
 /************/
+
+.beforeFooter
+{
+	color: #00DBC4;
+	background-color: #00DBC4;
+	height: 10px;
+}
 
 footer
 {
@@ -194,6 +201,43 @@ footer
 	display:inline-block;
 }
 
+
+/*Header*/
+/********/
+.backgroundDiv
+{
+	background-color:#000000;
+	background-image:url(../img/controller2.bmp);
+	background-size:100%;
+	background-repeat: no-repeat;
+}
+		
+header
+{
+	padding-left:10%;
+	padding-right:10%;
+	padding-top:60px;
+}
+		
+.eticsLogo
+{
+	width:20%;
+}
+		
+.microboutiqueLogo
+{
+	width:20%;
+	float:right;
+	padding-top:35px;
+}
+		
+.oeildechat
+{
+	width:12%;
+	float:right;
+	padding-top:3%;
+}
+		
 /*Screen adjustements*/
 /*********************/
 @media only screen and (max-width: 800px)
@@ -267,5 +311,29 @@ footer
 	.footerRightSection > p
 	{
 		margin-bottom:15px;
+	}
+	
+	/*Header media modification*/
+	.eticsLogo
+	{
+		width:55%;
+		margin-left:20.5%;
+		margin-right:20.5%;
+	}
+			
+	.microboutiqueLogo
+	{
+		width:30%;
+		margin-right:20%;
+		float:left;
+		padding-top:10%;
+	}
+	.oeildechat
+	{
+		width:22%;
+		margin-left:14%;
+		margin-right:14%;
+		float:left;
+		padding-top:35px;
 	}
 }

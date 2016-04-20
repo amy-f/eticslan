@@ -1,5 +1,7 @@
+		<hr  class="beforeFooter"/>
+		
 		<footer>
-
+			
 			<div class="footerLeftSection">
 			
 				<img src="img/logocegep.png" />
@@ -28,7 +30,6 @@
 				</div>
 			
 			</div>
-			
 			
 			<div style="clear: both"></div>
 
