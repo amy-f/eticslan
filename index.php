@@ -29,38 +29,10 @@
 	<link rel="stylesheet" href="css/style.css" />
 
 	<style>
-		.backgroundDiv
-		{
-			background-color:#000000;
-			background-image:url(img/controller2.bmp);
-			background-size:100%;
-			background-repeat: no-repeat;
-		}
 		
-		header
+		@media only screen and (max-width: 800px)
 		{
-			padding-left:10%;
-			padding-right:10%;
-			padding-top:60px;
-		}
-		
-		.eticsLogo
-		{
-			width:20%;
-		}
-		
-		.microboutiqueLogo
-		{
-			width:12%;
-			float:right;
-			padding-top:35px;
-		}
-		
-		.oeildechat
-		{
-			width:20%;
-			float:right;
-			padding-top:30px;
+			
 		}
 	</style>
 	
@@ -72,16 +44,7 @@
 		<div class="backgroundDiv">
 		
 		
-			<header>
-			
-				<img src="img/logolan.png" class="eticsLogo"/>
-				
-				<img src="img/oeildechat.png" class="microboutiqueLogo"/>
-				<img src="img/microboutique.png" class="oeildechat"/>
-
-			
-			
-			</header>
+			<?php include 'php\header.php' ?>
 		
 		
 		</div>
