@@ -117,7 +117,7 @@ nav > ul > li > img
 }
 
 /*Teal bar under nav*/
-nav > hr
+.afterHeader
 {
 	color: #00DBC4;
 	background-color: #00DBC4;
@@ -127,6 +127,13 @@ nav > hr
 
 /*Footer CSS*/
 /************/
+
+.beforeFooter
+{
+	color: #00DBC4;
+	background-color: #00DBC4;
+	height: 10px;
+}
 
 footer
 {
@@ -193,6 +200,7 @@ footer
 	width:10%;
 	display:inline-block;
 }
+
 
 /*Screen adjustements*/
 /*********************/

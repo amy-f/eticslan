@@ -33,8 +33,18 @@
 	</style>
 	
 </head>
-    <body style="background-color:#00887A"><!-- style="background-color:#3C4140" -->
+    <body style="background-color:#3C4140"><!-- style="background-color:#3C4140" -->
 		<?php include 'php\navbar.php' ?>
+		
+		
+		<div style="background-color:#000000;
+	background-image:url(img/controller2.bmp);
+	background-size:100%;
+	background-repeat: no-repeat;height:600px">
+		
+		
+		</div>
+		
 		
 		<?php include 'php\footer.php' ?>	
     </body>
