@@ -28,8 +28,14 @@
     <title>ÉTICS LAN - Index</title>
 	<link rel="stylesheet" href="css/style.css" />
 
+	<style>
+			
+	</style>
+	
 </head>
-    <body>
+    <body style="background-color:#00887A"><!-- style="background-color:#3C4140" -->
 		<?php include 'php\navbar.php' ?>
+		
+		<?php include 'php\footer.php' ?>	
     </body>
 </html>

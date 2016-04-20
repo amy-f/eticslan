@@ -56,7 +56,6 @@ nav > ul > li
 	display: inline-block;
 	text-align: center;
 	font-family: Georgia;
-	font-weight: bold;
 	width: 130px;
 }
 
@@ -126,6 +125,75 @@ nav > hr
 }
 
 
+/*Footer CSS*/
+/************/
+
+footer
+{
+	background-color:#3C4140;
+	width:100%;
+	padding:30px;
+}
+
+.footerLeftSection
+{
+	float:left;
+	width:30%;
+}
+	
+.footerLeftSection > img
+{
+	width:55%;
+}
+
+.footerLeftSection > p
+{
+	font-size:9pt;
+	color:#FFFFFF;
+	font-weight:bold;
+	font-family:Georgia;
+	text-justify:inter-word;
+	text-align: justify;
+}
+	
+.footerMiddleSection
+{
+	list-style-type: none;
+	font-size:9pt;
+	color:#FFFFFF;
+	font-weight:bold;
+	font-family: Georgia;
+	margin-left:8%;
+	float:left;
+	width:22%;
+}
+	
+.footerMiddleSection > p:first-child
+{
+	font-size:12pt;
+}
+	
+.footerRightSection
+{
+	margin-left:15%;
+	float:left;
+	width:25%;
+}
+	
+.footerRightSection > p
+{
+	font-weight:bold;
+	font-family: Georgia;color:#FFFFFF;
+	font-size:12pt;
+	display: inline-block;
+}
+	
+.footerRightSection > div > img
+{
+	width:10%;
+	display:inline-block;
+}
+
 /*Screen adjustements*/
 /*********************/
 @media only screen and (max-width: 800px)
@@ -135,22 +203,69 @@ nav > hr
 		width: 100%;
 		visibility: hidden;
 	}
-	[class*="navElement"] 
+	
+	/*Nav media modification*/
+	.navElement
 	{
 		width: 0px;
 		visibility: hidden;
 	}
-	[class*="hamburgerMenuIcon"] 
+	.hamburgerMenuIcon
 	{
 		visibility: visible;
 		width: 48px;
 		height: 48px;
 	}
-	[class*="lanLogo"]
+	.lanLogo
 	{
 		width: 70%;
 		margin-left: 15%;
 		margin-right: 15%;
 		margin-top: 10%
+	}
+	
+	/*Footer media modification*/
+	.footerLeftSection
+	{
+		position:relative;
+		width: 100%;
+	}
+	.footerLeftSection > img
+	{
+		float:left;
+		width: 30%;
+	}
+	.footerLeftSection > p
+	{
+		width: 60%;
+		position: absolute;
+		bottom: 0;
+		left: 40%;
+	}
+	.footerMiddleSection
+	{
+		margin-top:25px;
+		margin-left:0%;
+		width: 50%;
+	}
+	.footerMiddleSection > p
+	{
+		width:50%;
+		float:left;
+	}
+	.footerMiddleSection > p:first-child
+	{
+		width: 100%;
+		margin-bottom:15px;
+	}
+	.footerRightSection
+	{
+		margin-top:25px;
+		margin-left:15%;
+		width: 35%;
+	}
+	.footerRightSection > p
+	{
+		margin-bottom:15px;
 	}
 }
