@@ -46,7 +46,64 @@
 		
 			<?php include 'php\header.php' ?>
 		
-		
+			<center style="background-color:#3C4140;
+			height:300px;
+			margin-left:10%;
+			margin-right:10%;
+			margin-top:35px;
+			border-radius:3px">
+			
+			<p id="cl"></p>
+			<script>
+			
+			var deadline = 'October 22 2016 08:00:00 UTC-05:00';
+			
+			function getTimeRemaining(endtime)
+			{
+				var t = Date.parse(endtime) - Date.parse(new Date());
+				var seconds = Math.floor( (t/1000) % 60 );
+				var minutes = Math.floor( (t/1000/60) % 60 );
+				var hours = Math.floor( (t/(1000*60*60)) % 24 );
+				var days = Math.floor( t/(1000*60*60*24) );
+			return {
+				'total': t,
+				'days': days,
+				'hours': hours,
+				'minutes': minutes,
+				'seconds': seconds
+				};
+			}
+			
+			function initializeClock(id, endtime)
+			{
+				var clock = document.getElementById(id);
+				var timeinterval = setInterval(function(){
+					var t = getTimeRemaining(endtime);
+					clock.innerHTML = 'days: ' + t.days + '<br>' +
+                      'hours: '+ t.hours + '<br>' +
+                      'minutes: ' + t.minutes + '<br>' +
+                      'seconds: ' + t.seconds;
+					if(t.total<=0){
+						clearInterval(timeinterval);
+					}
+				},1000);
+			}
+			
+			//http://www.sitepoint.com/build-javascript-countdown-timer-no-dependencies/
+			
+			initializeClock("cl", deadline);
+			
+			
+			</script>
+			
+
+			
+			</center>
+			
+			<!-- Used to make some paddig that will not
+			cut of the image -->
+			<div style="height:35px;"></div>
+
 		</div>
 		
 		
