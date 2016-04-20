@@ -9,13 +9,13 @@
 			</div>
 
 			
-			<ul class="footerMiddleSection">
-				<li>Commanditaires</li>
-				<li>Microboutique</li>
-				<li>AÉCS</li>
-				<li>L'Oeil de Chat</li>
-				<li>Siboire</li>
-			</ul>
+			<div class="footerMiddleSection">
+				<p>Commanditaires</p>
+				<p>Microboutique</p>
+				<p>AÉCS</p>
+				<p>L'Oeil de Chat</p>
+				<p>Siboire</p>
+			</div>
 				
 			<div class="footerRightSection">
 			
