@@ -238,7 +238,52 @@ header
 	float:right;
 	padding-top:3%;
 }
+
+
+/*Index CSS*/
+/***********/
+
+center
+{
+	background-color:#3C4140;
+	margin-left:10%;
+	margin-right:10%;
+	margin-top:35px;
+	border-radius:3px;
+}
+
+.counddownHeader > p
+{
+	font-size:32px;
+	display:inline-block;
+}
 		
+.counddownHeader > div
+{
+	font-weight:bold;
+	font-size:32px;
+	display:inline-block;
+}
+	
+center > img
+{
+	padding-top:32px;
+	width:90%;
+}
+	
+center > div
+{
+	width:90%;
+	color:#00DBC4;
+	font-size:18px;
+	padding-top:32px;
+}
+
+center > div:last-of-type
+{
+	padding-bottom:32px;
+}
+	
 /*Screen adjustements*/
 /*********************/
 @media only screen and (max-width: 800px)
@@ -336,5 +381,16 @@ header
 		margin-right:14%;
 		float:left;
 		padding-top:35px;
+	}
+	
+	/*Index media modification*/
+	.counddownHeader > p
+			{
+				display:block;
+			}
+		
+	.counddownHeader > div
+	{
+		display:block;
 	}
 }
