@@ -29,11 +29,14 @@
 	<link rel="stylesheet" href="css/style.css" />
 
 	<style>
+				
+		
 		
 		@media only screen and (max-width: 800px)
 		{
 			
 		}
+		
 	</style>
 	
 </head>
@@ -46,7 +49,9 @@
 		
 			<?php include 'php\header.php' ?>
 		
+			<?php include 'php\content-index.php' ?>
 		
+			
 		</div>
 		
 		
