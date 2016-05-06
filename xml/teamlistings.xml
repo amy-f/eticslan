@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<teamlistings>
+	<team game="lol" name="Counter-Logic Gaming">
+		<member>
+			<name>Darshan Upadhyaha</name>
+			<gamertag>Darshan</gamertag>
+			<role>Top</role>
+		</member>
+		<member>
+			<name>Jake Puchero</name>
+			<gamertag>Xmithie</gamertag>
+			<role>Jungler</role>
+		</member>
+		<member>
+			<name>Choi Jae-hyun</name>
+			<gamertag>HuHi</gamertag>
+			<role>Mid</role>
+		</member>
+		<member>
+			<name>Trevor Hayes</name>
+			<gamertag>Stixxay</gamertag>
+			<role>AD Carry</role>
+		</member>
+		<member>
+			<name>Zaqueri Black</name>
+			<gamertag>Aphromoo</gamertag>
+			<role>Support</role>
+		</member>
+	</team>
+	<team game="lol" name="">
+	</team>
+	<team game="lol" name="">
+	</team>
+	<team game="lol" name="">
+	</team>
+	<team game="csgo" name="">
+	</team>
+	<team game="csgo" name="">
+	</team>
+	<team game="melee" name="">
+	</team>
+	<team game="melee" name="">
+	</team>
+</teamlistings>
