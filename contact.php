@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /**
  * Created by PhpStorm.
  * User: Amélie
@@ -25,7 +25,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>ÉTICS LAN - Index</title>
+    <title>ÉTICS LAN - Contact</title>
 	<link rel="stylesheet" href="css/style.css" />
 
 	<style>

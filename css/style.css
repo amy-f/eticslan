@@ -1,0 +1,396 @@
+﻿/*Media CSS*/
+/***********/
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10{width: 83.33%;}
+.col-11{width: 91.66%;}
+.col-12{width: 100%;}
+
+
+
+.lanLogo
+{
+	width: 20%;
+}
+
+
+
+
+
+
+
+/*General CSS*/
+/************/
+*
+{
+	padding: 0px;
+	margin: 0px;
+	box-sizing: border-box;
+}
+
+a
+{
+	text-decoration: none;
+}
+
+
+/*Nav bar css*/
+/*************/
+nav
+{
+	background-color:#3C4140;
+}
+
+nav > ul > li
+{
+	transition: 0.2s;
+	background-color:#3C4140;
+	display: inline-block;
+	text-align: center;
+	font-family: Georgia;
+	width: 130px;
+}
+
+nav > ul > li:hover
+{
+	transition: 1s;
+	background-color: #81807C;
+}
+
+nav > ul > li > a
+{
+	color: #FFFFFF;
+	display: block;
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
+
+nav > ul > li > img
+{
+	padding: 10px;
+}
+
+.navElement
+{
+	/*empty [used by javascript]*/
+}
+
+.hamburgerMenuIcon 
+{
+	visibility: hidden;
+	width:0px;
+	float:left;
+	cursor:pointer;
+}
+ 
+.fixedRightNavElement
+{
+	background-color:#3C4140;
+	color:#00DBC4;
+	float:right;
+}
+ 
+.fixedRightNavElement > a
+{
+	color:#00DBC4;
+}
+
+/*Used for expanding menu*/
+.navElement.hamburgerExpended
+ {
+	visibility:visible;
+	width:100%;
+	border-top:1pt solid #00DBC4;	
+}
+
+ .hamburgerMenuIcon.hamburgerExpended
+ {
+	background-color:#81807C;
+}
+
+/*Teal bar under nav*/
+.afterHeader
+{
+	color: #00DBC4;
+	background-color: #00DBC4;
+	height: 4px;
+}
+
+
+/*Footer CSS*/
+/************/
+
+.beforeFooter
+{
+	color: #00DBC4;
+	background-color: #00DBC4;
+	height: 10px;
+}
+
+footer
+{
+	background-color:#3C4140;
+	width:100%;
+	padding:30px;
+}
+
+.footerLeftSection
+{
+	float:left;
+	width:30%;
+}
+	
+.footerLeftSection > img
+{
+	width:55%;
+}
+
+.footerLeftSection > p
+{
+	font-size:9pt;
+	color:#FFFFFF;
+	font-weight:bold;
+	font-family:Georgia;
+	text-justify:inter-word;
+	text-align: justify;
+}
+	
+.footerMiddleSection
+{
+	list-style-type: none;
+	font-size:9pt;
+	color:#FFFFFF;
+	font-weight:bold;
+	font-family: Georgia;
+	margin-left:8%;
+	float:left;
+	width:22%;
+}
+	
+.footerMiddleSection > p:first-child
+{
+	font-size:12pt;
+}
+	
+.footerRightSection
+{
+	margin-left:15%;
+	float:left;
+	width:25%;
+}
+	
+.footerRightSection > p
+{
+	font-weight:bold;
+	font-family: Georgia;color:#FFFFFF;
+	font-size:12pt;
+	display: inline-block;
+}
+	
+.footerRightSection > div > img
+{
+	width:10%;
+	display:inline-block;
+}
+
+
+/*Header*/
+/********/
+.backgroundDiv
+{
+	background-color:#000000;
+	background-image:url(../img/controller2.bmp);
+	background-size:100%;
+	background-repeat: no-repeat;
+	width:100%;
+}
+		
+header
+{
+	padding-left:10%;
+	padding-right:10%;
+	padding-top:60px;
+}
+		
+.eticsLogo
+{
+	width:20%;
+}
+		
+.microboutiqueLogo
+{
+	width:20%;
+	float:right;
+	padding-top:35px;
+}
+		
+.oeildechat
+{
+	width:12%;
+	float:right;
+	padding-top:3%;
+}
+
+
+/*Index CSS*/
+/***********/
+
+article
+{
+	background-color:#3C4140;
+	margin-left:10%;
+	margin-right:10%;
+	margin-top:35px;
+	border-radius:3px;
+}
+
+.counddownHeader > p
+{
+	font-size:32px;
+	display:inline-block;
+}
+		
+.counddownHeader > div
+{
+	font-weight:bold;
+	font-size:32px;
+	display:inline-block;
+}
+	
+article > img
+{
+	padding-top:32px;
+	width:90%;
+}
+	
+article > div
+{
+	width:90%;
+	color:#00DBC4;
+	font-size:18px;
+	padding-top:32px;
+}
+
+article > div:last-of-type
+{
+	padding-bottom:32px;
+}
+	
+/*Screen adjustements*/
+/*********************/
+@media only screen and (max-width: 800px)
+{
+	[class*="col-"] 
+	{
+		width: 100%;
+		visibility: hidden;
+	}
+	
+	/*Nav media modification*/
+	.navElement
+	{
+		width: 0px;
+		visibility: hidden;
+	}
+	.hamburgerMenuIcon
+	{
+		visibility: visible;
+		width: 48px;
+		height: 48px;
+	}
+	.lanLogo
+	{
+		width: 70%;
+		margin-left: 15%;
+		margin-right: 15%;
+		margin-top: 10%
+	}
+	
+	/*Footer media modification*/
+	.footerLeftSection
+	{
+		position:relative;
+		width: 100%;
+	}
+	.footerLeftSection > img
+	{
+		float:left;
+		width: 30%;
+	}
+	.footerLeftSection > p
+	{
+		width: 60%;
+		position: absolute;
+		bottom: 0;
+		left: 40%;
+	}
+	.footerMiddleSection
+	{
+		margin-top:25px;
+		margin-left:0%;
+		width: 50%;
+	}
+	.footerMiddleSection > p
+	{
+		width:50%;
+		float:left;
+	}
+	.footerMiddleSection > p:first-child
+	{
+		width: 100%;
+		margin-bottom:15px;
+	}
+	.footerRightSection
+	{
+		margin-top:25px;
+		margin-left:15%;
+		width: 35%;
+	}
+	.footerRightSection > p
+	{
+		margin-bottom:15px;
+	}
+	
+	/*Header media modification*/
+	.eticsLogo
+	{
+		width:55%;
+		margin-left:20.5%;
+		margin-right:20.5%;
+	}
+			
+	.microboutiqueLogo
+	{
+		width:30%;
+		margin-right:20%;
+		float:left;
+		padding-top:10%;
+	}
+	.oeildechat
+	{
+		width:22%;
+		margin-left:14%;
+		margin-right:14%;
+		float:left;
+		padding-top:35px;
+	}
+	
+	/*Index media modification*/
+	.counddownHeader > p
+			{
+				display:block;
+			}
+		
+	.counddownHeader > div
+	{
+		display:block;
+	}
+}

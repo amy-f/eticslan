@@ -1,4 +1,4 @@
-<center>
+<article>
 			
 	<h1>Tournois</h1>
 			
@@ -23,7 +23,7 @@
 	</div>
 			
 						
-</center>
+</article>
 				
 <!-- Used to make some paddig that will not
 cut of the image -->
