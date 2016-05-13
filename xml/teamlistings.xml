@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <teamlistings>
-	<team game="lol" name="Counter-Logic Gaming">
+	<team name="Counter-Logic Gaming">
+		<game>League of Legends</game>
+		<country>USA</country>
 		<member>
 			<name>Darshan Upadhyaha</name>
 			<gamertag>Darshan</gamertag>
@@ -26,19 +28,171 @@
 			<gamertag>Aphromoo</gamertag>
 			<role>Support</role>
 		</member>
+		<sponsor>Razer</sponsor>
+		<website>http://clgaming.net/</website>
 	</team>
-	<team game="lol" name="">
+	<team name="Team SoloMid">
+		<game>League of Legends</game>
+		<country>USA</country>
+		<member>
+			<name>Kevin Yarnell </name>
+			<gamertag>Hauntzer</gamertag>
+			<role>Top</role>
+		</member>
+		<member>
+			<name>Dennis Johnsen</name>
+			<gamertag>Svenskeren</gamertag>
+			<role>Jungler</role>
+		</member>
+		<member>
+			<name>Søren Bjerg </name>
+			<gamertag>Bjergsen</gamertag>
+			<role>Mid</role>
+		</member>
+		<member>
+			<name>Yiliang (Peter) Peng</name>
+			<gamertag>Doublelift</gamertag>
+			<role>AD Carry</role>
+		</member>
+		<member>
+			<name>Vincent Wang</name>
+			<gamertag>Biofrost</gamertag>
+			<role>Support</role>
+		</member>
+		<sponsor>Logitech G</sponsor>
+		<website>http://www.tsm.gg/</website>
 	</team>
-	<team game="lol" name="">
+	<team name="G2 ESports">
+		<game>League of Legends</game>
+		<country>France</country>
+		<member>
+			<name>Darshan Upadhyaha</name>
+			<gamertag>Darshan</gamertag>
+			<role>Top</role>
+		</member>
+		<member>
+			<name>Jake Puchero</name>
+			<gamertag>Xmithie</gamertag>
+			<role>Jungler</role>
+		</member>
+		<member>
+			<name>Choi Jae-hyun</name>
+			<gamertag>HuHi</gamertag>
+			<role>Mid</role>
+		</member>
+		<member>
+			<name>Trevor Hayes</name>
+			<gamertag>Stixxay</gamertag>
+			<role>AD Carry</role>
+		</member>
+		<member>
+			<name>Zaqueri Black</name>
+			<gamertag>Aphromoo</gamertag>
+			<role>Support</role>
+		</member>
+		<sponsor>Kinguin</sponsor>
+		<website>http://facebook.com/G2Esports/</website>
 	</team>
-	<team game="lol" name="">
+	<team name="Luminosity Gaming">
+		<game>Counter-Strike : Global Offensive</game>
+		<country>Brésil</country>
+		<member>
+			<name>Gabriel Toledo</name>
+			<gamertag>FalleN</gamertag>
+		</member>
+		<member>
+			<name>Fernando Alvarenga</name>
+			<gamertag>fer</gamertag>
+		</member>
+		<member>
+			<name>Marcelo David</name>
+			<gamertag>coldzera</gamertag>
+		</member>
+		<member>
+			<name>Lincoln Lau</name>
+			<gamertag>fnx</gamertag>
+		</member>
+		<member>
+			<name>Tacio Filho</name>
+			<gamertag>TACO</gamertag>
+		</member>
+		<sponsor>HyperX</sponsor>
+		<website>http://luminosity.gg/</website>
 	</team>
-	<team game="csgo" name="">
+	<team name="Natus Vincere">
+		<game>Counter-Strike : Global Offensive</game>
+		<country>Ukraine</country>
+		<member>
+			<name>Daniil Teslenko</name>
+			<gamertag>Zeus</gamertag>
+		</member>
+		<member>
+			<name>Denis Kostin</name>
+			<gamertag>seized</gamertag>
+		</member>
+		<member>
+			<name>Ladislav Kovács</name>
+			<gamertag>GuardiaN</gamertag>
+		</member>
+		<member>
+			<name>Ioann Sukhariev</name>
+			<gamertag>Edward</gamertag>
+		</member>
+		<member>
+			<name>Egor Vasilyev</name>
+			<gamertag>flamie</gamertag>
+		</member>
+		<sponsor>G2A</sponsor>
+		<website>http://navi-gaming.com/</website>
 	</team>
-	<team game="csgo" name="">
+	<team>
+		<game>Super Smash Brothers : Melee</game>
+		<country>Canada</country>
+		<member>
+			<name>David Kabanza</name>
+			<gamertag>Krowey</gamertag>
+		</member>
 	</team>
-	<team game="melee" name="">
+	<team>
+		<game>Super Smash Brothers : Melee</game>
+		<country>Canada</country>
+		<member>
+			<name>Pascal de Lisio</name>
+			<gamertag>Pacofication</gamertag>
+		</member>
 	</team>
-	<team game="melee" name="">
+	<team>
+		<game>Super Smash Brothers : Melee</game>
+		<country>Canada</country>
+		<member>
+			<name>Vincent Veilleux</name>
+			<gamertag>ShakeLaBinFort</gamertag>
+		</member>
+	</team>
+	<team>
+		<game>Super Smash Brothers : Melee</game>
+		<country>USA</country>
+		<member>
+			<name>Narcissa Wright</name>
+			<gamertag>Cosmo</gamertag>
+		</member>
+	</team>
+	<team name="iBuyPower Cosmic">
+		<game>Rocket League</game>
+		<country>USA</country>
+		<member>
+			<name>Gabriel Toledo</name>
+			<gamertag>Kronovi</gamertag>
+		</member>
+		<member>
+			<name>Fernando Alvarenga</name>
+			<gamertag>Gibbs</gamertag>
+		</member>
+		<member>
+			<name>Marcelo David</name>
+			<gamertag>Gambit</gamertag>
+		</member>
+		<sponsor>iBuyPower</sponsor>
+		<website>https://rocket-league.com/proteam/ibp-cosmic/</website>
 	</team>
 </teamlistings>

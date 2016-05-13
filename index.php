@@ -26,8 +26,35 @@
 <head>
     <meta charset="UTF-8">
     <title>ÉTICS LAN - Index</title>
-</head>
-    <body>
+	<link rel="stylesheet" href="css/style.css" />
 
+	<style>
+				
+		
+		
+		@media only screen and (max-width: 800px)
+		{
+			
+		}
+		
+	</style>
+	
+</head>
+    <body style="background-color:#3C4140"><!-- style="background-color:#3C4140" -->
+		<?php include 'php\navbar.php' ?>
+		
+		
+		<div class="backgroundDiv">
+		
+		
+			<?php include 'php\header.php' ?>
+		
+			<?php include 'php\content-index.php' ?>
+		
+			
+		</div>
+		
+		
+		<?php include 'php\footer.php' ?>	
     </body>
 </html>
