@@ -3,52 +3,135 @@
  */
 
 //Initialisation de la page
-var entryID = 0;
-var adresses;
 generateXML();
 
 //Lecture des données d'un fichier XML
 function readXML(xml) {
 
     var xmlDoc = xml.responseXML;
-    var carnet = xmlDoc.getElementsByTagName("carnet")[0];
-    adresses = carnet.getElementsByTagName("contact");
-    generateTeamArray();
+    var teamList = xmlDoc.getElementsByTagName("teamlistings")[0];
+    var teams = teamList.getElementsByTagName("team");
+    generateTeamArray(teams);
 }
 
 //Génère tous les tableaux liés à chaque jeu
-function generateTeamArray() {
-    document.getElementById("output").innerHTML = "Nom : ";
-    document.getElementById("output").innerHTML += adresses[entryID].getElementsByTagName("nom")[0].childNodes[0].nodeValue + "<br/>";
-    document.getElementById("output").innerHTML += "Adresse : ";
-    document.getElementById("output").innerHTML += adresses[entryID].getElementsByTagName("adresse")[0].childNodes[0].nodeValue + "<br/>";
-    document.getElementById("output").innerHTML += "Ville : ";
-    document.getElementById("output").innerHTML += adresses[entryID].getElementsByTagName("ville")[0].childNodes[0].nodeValue + "<br/>";
-    document.getElementById("output").innerHTML += "Province : ";
-    document.getElementById("output").innerHTML += adresses[entryID].getElementsByTagName("province")[0].childNodes[0].nodeValue + "<br/>";
-    document.getElementById("output").innerHTML += "Code postal : ";
-    document.getElementById("output").innerHTML += adresses[entryID].getElementsByTagName("codepostal")[0].childNodes[0].nodeValue + "<br/>";
-
+function generateTeamArray(teams) {
+	var i, gameName;
+	 for (i = 0; i < teams.length; i++) {
+		gameName = teams[i].getElementsByTagName("game")[0].firstChild.nodeValue;
+		switch(gameName) {
+			case "League of Legends":
+				generateLeagueEntry(teams[i]);
+				break;
+			case "Counter-Strike : Global Offensive":
+				generateCSGOEntry(teams[i]);
+				break;
+			case "Super Smash Brothers : Melee":
+				generateMeleeEntry(teams[i]);
+				break;
+			case "Rocket League":
+				generateRocketEntry(teams[i]);
+				break;
+		}
+	 }
 }
 
 //Génère le tableau pour les équipes de League of Legends
-function generateLeagueArray() {
+function generateLeagueEntry(team) {
+
+	var i;
+	var table = document.getElementById("league");
+	var membersList = team.getElementsByTagName("member");
+
+	var row = table.insertRow(1);
+	var name = row.insertCell(0);
+	var country = row.insertCell(1);
+	var members = row.insertCell(2);
+	var sponsor = row.insertCell(3);
+	var website = row.insertCell(4);
+
+	members.innerHTML = "<ul>";
+	for (i = 0; i < membersList.length; i++) {
+		members.innerHTML += "<li>" + membersList[i].getElementsByTagName("name")[0].firstChild.nodeValue + " - " + membersList[i].getElementsByTagName("gamertag")[0].firstChild.nodeValue + " (" + membersList[i].getElementsByTagName("role")[0].firstChild.nodeValue + ")</li>";
+	}
+	members.innerHTML += "</ul>";
+
+	name.innerHTML = team.getElementsByTagName("name")[0].firstChild.nodeValue;
+	country.innerHTML = team.getElementsByTagName("country")[0].firstChild.nodeValue;
+	sponsor.innerHTML = team.getElementsByTagName("sponsor")[0].firstChild.nodeValue;
+	website.innerHTML = "<a href='" + team.getElementsByTagName("website")[0].firstChild.nodeValue + "'>" + team.getElementsByTagName("website")[0].firstChild.nodeValue + "</a>";
 
 }
 
 //Génère le tableau pour les équipes de CS:GO
-function generateCSGOArray() {
+function generateCSGOEntry(team) {
+	var i;
+	var table = document.getElementById("csgo");
+	var membersList = team.getElementsByTagName("member");
 
+	var row = table.insertRow(1);
+	var name = row.insertCell(0);
+	var country = row.insertCell(1);
+	var members = row.insertCell(2);
+	var sponsor = row.insertCell(3);
+	var website = row.insertCell(4);
+
+	members.innerHTML = "<ul>";
+	for (i = 0; i < membersList.length; i++) {
+		members.innerHTML += "<li>" + membersList[i].getElementsByTagName("name")[0].firstChild.nodeValue + " - " + membersList[i].getElementsByTagName("gamertag")[0].firstChild.nodeValue + "</li>";
+	}
+	members.innerHTML += "</ul>";
+
+	name.innerHTML = team.getElementsByTagName("name")[0].firstChild.nodeValue;
+	country.innerHTML = team.getElementsByTagName("country")[0].firstChild.nodeValue;
+	sponsor.innerHTML = team.getElementsByTagName("sponsor")[0].firstChild.nodeValue;
+	website.innerHTML = "<a href='" + team.getElementsByTagName("website")[0].firstChild.nodeValue + "'>" + team.getElementsByTagName("website")[0].firstChild.nodeValue + "</a>";
 }
 
 //Génère le tableau pour les équipes de Super Smash Brothers : Melee
-function generateMeleeArray() {
+function generateMeleeEntry(team) {
 
+	var i;
+	var table = document.getElementById("melee");
+	var membersList = team.getElementsByTagName("member");
+
+	var row = table.insertRow(1);
+	var name = row.insertCell(0);
+	var country = row.insertCell(1)
+
+	name.innerHTML = "<ul>";
+	for (i = 0; i < membersList.length; i++) {
+		name.innerHTML += "<li>" + membersList[i].getElementsByTagName("name")[0].firstChild.nodeValue + " - " + membersList[i].getElementsByTagName("gamertag")[0].firstChild.nodeValue + "</li>";
+	}
+	name.innerHTML += "</ul>";
+
+	country.innerHTML = team.getElementsByTagName("country")[0].firstChild.nodeValue;
 }
 
 //Génère le tableau pour les équipes de Rocket League
-function generateRocketArray() {
+function generateRocketEntry(team) {
 
+	var i;
+	var table = document.getElementById("rocket");
+	var membersList = team.getElementsByTagName("member");
+
+	var row = table.insertRow(1);
+	var name = row.insertCell(0);
+	var country = row.insertCell(1);
+	var members = row.insertCell(2);
+	var sponsor = row.insertCell(3);
+	var website = row.insertCell(4);
+
+	members.innerHTML = "<ul>";
+	for (i = 0; i < membersList.length; i++) {
+		members.innerHTML += "<li>" + membersList[i].getElementsByTagName("name")[0].firstChild.nodeValue + " - " + membersList[i].getElementsByTagName("gamertag")[0].firstChild.nodeValue + "</li>";
+	}
+	members.innerHTML += "</ul>";
+
+	name.innerHTML = team.getElementsByTagName("name")[0].firstChild.nodeValue;
+	country.innerHTML = team.getElementsByTagName("country")[0].firstChild.nodeValue;
+	sponsor.innerHTML = team.getElementsByTagName("sponsor")[0].firstChild.nodeValue;
+	website.innerHTML = "<a href='" + team.getElementsByTagName("website")[0].firstChild.nodeValue + "'>" + team.getElementsByTagName("website")[0].firstChild.nodeValue + "</a>";
 }
 
 //Génère et récupère des données dans un fichier XML

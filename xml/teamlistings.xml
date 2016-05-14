@@ -1,6 +1,7 @@
-<?xml version="1.0" encoding="UTF-8"?>
+ï»¿<?xml version="1.0" encoding="UTF-8"?>
 <teamlistings>
-	<team name="Counter-Logic Gaming">
+	<team>
+		<name>Counter-Logic Gaming</name>
 		<game>League of Legends</game>
 		<country>USA</country>
 		<member>
@@ -31,7 +32,8 @@
 		<sponsor>Razer</sponsor>
 		<website>http://clgaming.net/</website>
 	</team>
-	<team name="Team SoloMid">
+	<team>
+		<name>Team SoloMid</name>
 		<game>League of Legends</game>
 		<country>USA</country>
 		<member>
@@ -45,7 +47,7 @@
 			<role>Jungler</role>
 		</member>
 		<member>
-			<name>Søren Bjerg </name>
+			<name>Soren Bjerg </name>
 			<gamertag>Bjergsen</gamertag>
 			<role>Mid</role>
 		</member>
@@ -62,7 +64,8 @@
 		<sponsor>Logitech G</sponsor>
 		<website>http://www.tsm.gg/</website>
 	</team>
-	<team name="G2 ESports">
+	<team>
+		<name>G2 ESports</name>
 		<game>League of Legends</game>
 		<country>France</country>
 		<member>
@@ -93,9 +96,10 @@
 		<sponsor>Kinguin</sponsor>
 		<website>http://facebook.com/G2Esports/</website>
 	</team>
-	<team name="Luminosity Gaming">
+	<team>
+		<name>Luminosity Gaming</name>
 		<game>Counter-Strike : Global Offensive</game>
-		<country>Brésil</country>
+		<country>BrÃ©sil</country>
 		<member>
 			<name>Gabriel Toledo</name>
 			<gamertag>FalleN</gamertag>
@@ -119,7 +123,8 @@
 		<sponsor>HyperX</sponsor>
 		<website>http://luminosity.gg/</website>
 	</team>
-	<team name="Natus Vincere">
+	<team>
+		<name>Natus Vincere</name>
 		<game>Counter-Strike : Global Offensive</game>
 		<country>Ukraine</country>
 		<member>
@@ -131,7 +136,7 @@
 			<gamertag>seized</gamertag>
 		</member>
 		<member>
-			<name>Ladislav Kovács</name>
+			<name>Ladislav Kovacs</name>
 			<gamertag>GuardiaN</gamertag>
 		</member>
 		<member>
@@ -177,7 +182,8 @@
 			<gamertag>Cosmo</gamertag>
 		</member>
 	</team>
-	<team name="iBuyPower Cosmic">
+	<team>
+		<name>iBuyPower Cosmic</name>
 		<game>Rocket League</game>
 		<country>USA</country>
 		<member>
