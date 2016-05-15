@@ -44,7 +44,7 @@
 	
 	<div id="inscription-form">
 		<h1>Vous inscrire</h1>
-		<form name="inscription">
+		<form name="inscription" method="post">
 			<label for="game">Jeu : </label>
 			<select name="game" id="game">
 				<option value="league">League of Legends</option>
@@ -111,7 +111,7 @@
 			<label for="sponsor">Commanditaire principal : </label> <input name="sponsor" id="sponsor" type="text"> <br/>
 			<label for="website">Site Web : </label> <input name="website" id="website" type="text"> <br/>
 			<br/>
-			<input type="submit" value="Envoyer" onclick="addNewTeam()"/>
+			<input type="submit" value="Envoyer" onclick="addNewTeam();"/>
 		</form>
 	</div>
 			
