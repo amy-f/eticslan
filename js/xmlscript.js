@@ -2,13 +2,40 @@
  * Created by Amélie on 2016-04-20.
  */
 
+//Variables du formulaire, utilisées dans tous les champs possibles
+var xmlDoc;
+var gameField = document.getElementById("game");
+var teamNameField = document.getElementById("teamname");
+var countryField = document.getElementById("country");
+var sponsorField = document.getElementById("sponsor");
+var websiteField = document.getElementById("website");
+var member1Fields = [document.getElementById("member1name"), document.getElementById("member1gamertag"), document.getElementById("member1role")];
+var member2Fields = [document.getElementById("member2name"), document.getElementById("member2gamertag"), document.getElementById("member2role")];
+var member3Fields = [document.getElementById("member3name"), document.getElementById("member3gamertag"), document.getElementById("member3role")];
+var member4Fields = [document.getElementById("member4name"), document.getElementById("member4gamertag"), document.getElementById("member4role")];
+var member5Fields = [document.getElementById("member5name"), document.getElementById("member5gamertag"), document.getElementById("member5role")];
+var memberFields = [member1Fields, member2Fields, member3Fields, member4Fields, member5Fields];
+
 //Initialisation de la page
 generateXML();
+
+//Génère et récupère des données dans un fichier XML
+function generateXML() {
+	var httpRequest = new XMLHttpRequest();
+	httpRequest.onreadystatechange = function() {
+		if (httpRequest.readyState == 4 && httpRequest.status == 200) {
+			readXML(httpRequest);
+		}
+	};
+
+	httpRequest.open("GET", "xml/teamlistings.xml", true);
+	httpRequest.send();
+}
 
 //Lecture des données d'un fichier XML
 function readXML(xml) {
 
-    var xmlDoc = xml.responseXML;
+    xmlDoc = xml.responseXML;
     var teamList = xmlDoc.getElementsByTagName("teamlistings")[0];
     var teams = teamList.getElementsByTagName("team");
     generateTeamArray(teams);
@@ -134,15 +161,107 @@ function generateRocketEntry(team) {
 	website.innerHTML = "<a href='" + team.getElementsByTagName("website")[0].firstChild.nodeValue + "'>" + team.getElementsByTagName("website")[0].firstChild.nodeValue + "</a>";
 }
 
-//Génère et récupère des données dans un fichier XML
-function generateXML() {
-    var httpRequest = new XMLHttpRequest();
-    httpRequest.onreadystatechange = function() {
-        if (httpRequest.readyState == 4 && httpRequest.status == 200) {
-            readXML(httpRequest);
-        }
-    };
-
-    httpRequest.open("GET", "xml/teamlistings.xml", true);
-    httpRequest.send();
+//Ajoute une équipe dans le fichier XML
+//TODO: Prévoir validation des champs avant l'ajout
+function addNewTeam() {
+	var gameName = gameField.value;
+	switch(gameName) {
+		case "league":
+			addNewLeagueTeam();
+			break;
+		case "csgo":
+			addNewCSGOTeam();
+			break;
+		case "melee":
+			addNewMeleeTeam();
+			break;
+		case "rocket":
+			addNewRocketTeam();
+			break;
+	}
+	alert("Merci pour votre inscription à l'édition 2016 de l'ÉTICS LAN!");
+	location.reload(true); 	//rafraîchit la page
 }
+
+//Gère l'ajout d'une équipe de League of Legends
+function addNewLeagueTeam() {
+
+	//Creates a new team node
+	var currentTeamList = xmlDoc.getElementsByTagName("team");
+	var teamNode = xmlDoc.createElement("team");
+
+	//Creates team settings
+	var teamNameNode = xmlDoc.createElement("name");
+	var teamNameTxt = xmlDoc.createTextNode(teamNameField.value);
+	teamNameNode.appendChild(teamNameTxt);
+	teamNode.appendChild(teamNameNode);
+
+	//Creates game node
+	var gameNameNode = xmlDoc.createElement("game");
+	var gameNodeTxt = xmlDoc.createTextNode("League of Legends");
+	gameNameNode.appendChild(gameNodeTxt);
+	teamNode.appendChild(gameNameNode);
+
+	var countryNode = xmlDoc.createElement("country");
+	var countryNodeTxt = xmlDoc.createTextNode(countryField.value);
+	countryNode.appendChild(countryNodeTxt);
+	teamNode.appendChild(countryNode);
+
+	//Creates member settings
+	for (var i = 0; i < memberFields.length; i++) {
+		var memberNode, nameNode, nameTxt, gamertagNode, gamertagTxt, roleNode, roleTxt;
+
+		//If first member or other members if they are defined
+		if (i == 0 || (i > 0 && memberFields[i][0].value != "")) {
+			memberNode = xmlDoc.createElement("member");
+
+			nameNode = xmlDoc.createElement("name");
+			nameTxt = xmlDoc.createTextNode(memberFields[i][0].value);
+			nameNode.appendChild(nameTxt);
+			gamertagNode = xmlDoc.createElement("gamertag");
+			gamertagTxt = xmlDoc.createTextNode(memberFields[i][1].value);
+			gamertagNode.appendChild(gamertagTxt);
+			roleNode = xmlDoc.createElement("role");
+			roleTxt = xmlDoc.createTextNode(memberFields[i][2].value);
+			roleNode.appendChild(roleTxt);
+
+			memberNode.appendChild(nameNode);
+			memberNode.appendChild(gamertagNode);
+			memberNode.appendChild(roleNode);
+
+			teamNode.appendChild(memberNode);
+		}
+
+	}
+
+	var sponsorNode = xmlDoc.createElement("sponsor");
+	var sponsorNodeTxt = xmlDoc.createTextNode(sponsorField.value);
+	sponsorNode.appendChild(sponsorNodeTxt);
+	teamNode.appendChild(sponsorNode);
+
+	var websiteNode = xmlDoc.createElement("website");
+	var websiteNodeTxt = xmlDoc.createTextNode(websiteField.value);
+	websiteNode.appendChild(websiteNodeTxt);
+	teamNode.appendChild(websiteNode);
+
+	//Appends the new team to the end of the XML Document
+	currentTeamList[currentTeamList.length - 1].appendChild(teamNode);
+}
+
+//Gère l'ajout d'une équipe de Counter-Strike ou de Rocket League
+function addNewCSGOTeam() {
+
+}
+
+//Gère l'ajout d'une équipe de Super Smash Brothers : Melee
+function addNewMeleeTeam() {
+
+}
+
+//Gère l'ajout d'une équipe de Rocket League
+function addNewRocketTeam() {
+
+}
+
+
+

@@ -27,8 +27,6 @@
     <meta charset="UTF-8">
     <title>ÉTICS LAN - Index</title>
 	<link rel="stylesheet" href="css/style.css" />
-	<script type="text/javascript" src="js/script.js"></script>
-
 	<style>
 				
 		
