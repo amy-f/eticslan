@@ -265,13 +265,13 @@ article
 	display:inline-block;
 }
 	
-article > img
+article > center > img
 {
 	padding-top:32px;
 	width:90%;
 }
 	
-article > div
+article > center > div
 {
 	width:90%;
 	color:#00DBC4;
@@ -279,7 +279,7 @@ article > div
 	padding-top:32px;
 }
 
-article > div:last-of-type
+article > center > div:last-of-type
 {
 	padding-bottom:32px;
 }

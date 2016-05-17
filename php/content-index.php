@@ -1,5 +1,10 @@
-﻿<article>
+﻿			
 			
+			
+			
+		
+		<article>
+			<center>
 			
 				<div class="counddownHeader">
 					<p>Bientôt au jeu dans</p>
@@ -78,8 +83,9 @@
 			</script>
 			
 
+			<center>
 			
-			</article>
+		</article>
 			
 			<!-- Used to make some paddig that will not
 			cut of the image -->
