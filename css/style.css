@@ -41,6 +41,20 @@ a
 	text-decoration: none;
 }
 
+p {
+	font-family: 'Roboto', sans-serif;
+	padding-top:10px;
+}
+
+h1, h2, h3 {
+	color: #00DBC4;
+	font-family: 'Arvo', sans-serif;
+}
+
+.main-title {
+	padding-top: 32px;
+}
+
 
 /*Nav bar css*/
 /*************/
@@ -55,7 +69,7 @@ nav > ul > li
 	background-color:#3C4140;
 	display: inline-block;
 	text-align: center;
-	font-family: Georgia;
+	font-family: 'Arvo', serif;
 	width: 130px;
 }
 
@@ -255,6 +269,7 @@ article
 .counddownHeader > p
 {
 	font-size:32px;
+	color: #00DBC4;
 	display:inline-block;
 }
 		
@@ -263,9 +278,18 @@ article
 	font-weight:bold;
 	font-size:32px;
 	display:inline-block;
+	font-family: 'Arvo', serif;
+}
+
+article p {
+	color: #81807C;
+}
+
+article > div {
+	padding-top:32px;
 }
 	
-article > center > img
+article > center > img, article > img
 {
 	padding-top:32px;
 	width:90%;
@@ -282,6 +306,49 @@ article > center > div
 article > center > div:last-of-type
 {
 	padding-bottom:32px;
+}
+
+.txt-align-center {
+	margin:0 auto;
+	text-align:center;
+}
+
+.txt-align-left {
+	text-align:left;
+}
+
+.txt-align-right {
+	text-align:right;
+}
+
+.txt-align-center > div {
+	width:90%;
+	color:#00DBC4;
+	padding-top:32px;
+	margin: auto;
+}
+
+.txt-align-center > div:last-of-type {
+	padding-bottom:32px;
+}
+
+.txt-align-center > img {
+	width:90%;
+	padding-top:32px;
+}
+
+.tournament {
+	margin:auto;
+	width:90%;
+}
+
+.tournament p {
+	padding-bottom: 10px;
+	color: #81807C;
+}
+
+.tournament p:last-of-type {
+	padding-bottom: 32px;
 }
 	
 /*Screen adjustements*/

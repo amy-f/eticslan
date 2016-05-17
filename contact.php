@@ -27,7 +27,8 @@
     <meta charset="UTF-8">
     <title>ÉTICS LAN - Contact</title>
 	<link rel="stylesheet" href="css/style.css" />
-
+	<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
 	<style>
 				
 		
