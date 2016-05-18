@@ -422,5 +422,127 @@ function addNewRocketTeam() {
 	teamListings[0].appendChild(teamNode);
 }
 
+function enableFormElements() {
+	var gameName = gameField.value;
+	switch(gameName) {
+		case "league":
+			enableLeagueFields();
+			break;
+		case "csgo":
+			enableCSGOFields();
+			break;
+		case "melee":
+			enableMeleeFields();
+			break;
+		case "rocket":
+			enableRocketFields();
+			break;
+	}
+}
+
+function enableLeagueFields() {
+
+	//Enables or disables pertinent fields and labels
+	teamNameField.disabled = false;
+	sponsorField.disabled = false;
+	websiteField.disabled = false;
+	for (var i = 0; i < memberFields.length; i++) {
+		for (var j = 0; j < member2Fields.length; j++) {
+			memberFields[i][j].disabled = false;
+		}
+	}
+	emptyAllFields();
+}
+
+function enableCSGOFields() {
+
+	//Enables or disables pertinent fields and labels
+	teamNameField.disabled = false;
+	sponsorField.disabled = false;
+	websiteField.disabled = false;
+	for (var i = 0; i < memberFields.length; i++) {
+		if (i == 0) {
+			memberFields[i][2].disabled = true;
+		}
+		else {
+			for (var j = 0; j < member2Fields.length; j++) {
+				if (j != 2) {
+					memberFields[i][j].disabled = false;
+				}
+				else {
+					memberFields[i][j].disabled = true;
+				}
+			}
+		}
+	}
+	emptyAllFields();
+}
+
+function enableMeleeFields() {
+
+	//Enables or disables pertinent fields and labels
+	teamNameField.disabled = true;
+	sponsorField.disabled = true;
+	websiteField.disabled = true;
+	for (var i = 0; i < memberFields.length; i++) {
+		if (i == 0) {
+			memberFields[i][2].disabled = true;
+		}
+		else {
+			for (var j = 0; j < member2Fields.length; j++) {
+				memberFields[i][j].disabled = true;
+			}
+		}
+		emptyAllFields();
+	}
+
+	function enableRocketFields() {
+
+		//Enables or disables pertinent fields and labels
+		teamNameField.disabled = false;
+		sponsorField.disabled = false;
+		websiteField.disabled = false;
+		//TODO: Correct loop 'cuz it acts weird.
+		for (var i = 0; i < memberFields.length; i++) {
+			if (i == 0) {
+				memberFields[i][2].disabled = true;
+			}
+			else {
+				for (var j = 0; j < member2Fields.length; j++) {
+					if(i <= 2) {
+						if (j != 2) {
+							memberFields[i][j].disabled = false;
+						}
+						else {
+							memberFields[i][j].disabled = true;
+						}
+					}
+					else {
+						memberFields[i][j].disabled = true;
+					}
+				}
+			}
+		}
+		emptyAllFields();
+	}
+
+	function emptyAllFields() {
+		teamNameField.value = "";
+		countryField.value = "";
+		sponsorField.value = "";
+		websiteField.value = "";
+		for (var i = 0; i < memberFields.length; i++) {
+			for (var j = 0; j < member1Fields.length; j++) {
+				if (j != 2) {
+					memberFields[i][j].value = "";
+				}
+				else {
+					memberFields[i][j].value = "Top";
+				}
+			}
+		}
+	}
+}
+
 
 

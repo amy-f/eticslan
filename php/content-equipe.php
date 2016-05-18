@@ -2,6 +2,7 @@
 			
 	<div class="txt-align-center">
 		<h1>Équipe</h1>
+		<img src="img/lan_comite.jpg"/>
 	</div>
 			
 	<div class="tournament">

@@ -25,6 +25,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
     <title>ÉTICS LAN - Contact</title>
 	<link rel="stylesheet" href="css/style.css" />
 	<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed|Roboto' rel='stylesheet' type='text/css'>

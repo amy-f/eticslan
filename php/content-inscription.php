@@ -4,9 +4,10 @@
 		<h1>Inscriptions</h1>
 	</div>
 
-	<div id="inscription-teamlist" class="col-10">
+	<div id="inscription-teamlist" class="col-11">
 		<p>Si vous souhaitez vous inscrire à un tournoi pour l'ÉTICS LAN 2016, c'est par <a href="#inscription-anchor">ici</a>.</p>
 		<h3>League of Legends</h3>
+		<div class="overflow-x">
 		<table id="league">
 			<tr id="league-header">
 				<th>Nom</th>
@@ -16,7 +17,9 @@
 				<th>Site Web</th>
 			</tr>
 		</table>
+		</div>
 		<h3>Counter Strike : Global Offensive</h3>
+		<div class="overflow-x">
 		<table id="csgo">
 			<tr>
 				<th>Nom</th>
@@ -26,14 +29,18 @@
 				<th>Site Web</th>
 			</tr>
 		</table>
+		</div>
 		<h3>Super Smash Brothers : Melee</h3>
+		<div class="overflow-x">
 		<table id="melee">
 			<tr>
 				<th>Nom</th>
 				<th>Pays</th>
 			</tr>
 		</table>
+		</div>
 		<h3>Rocket League</h3>
+		<div class="overflow-x">
 		<table id="rocket">
 			<tr>
 				<th>Nom</th>
@@ -43,13 +50,14 @@
 				<th>Site Web</th>
 			</tr>
 		</table>
+		</div>
 	</div>
 	
 	<div class="form">
 		<h1 id="inscription-anchor">Vous inscrire</h1>
 		<form name="inscription" method="post">
 			<label for="game">Jeu : </label>
-			<select name="game" id="game">
+			<select name="game" id="game" onchange="enableFormElements()">
 				<option value="league">League of Legends</option>
 				<option value="csgo">Counter Strike : Global Offensive</option>
 				<option value="melee">Super Smash Brothers : Melee</option>
