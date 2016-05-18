@@ -13,10 +13,9 @@
 			
 			<div class="footerMiddleSection">
 				<p>Commanditaires</p>
-				<p>Microboutique</p>
-				<p>AÉCS</p>
-				<p>L'Oeil de Chat</p>
-				<p>Siboire</p>
+				<p><a href="http://www.microboutique.ca" target="_blank">Microboutique</a></p>
+				<p><a href="http://aecs.info/" target="_blank">AÉCS</a></p>
+				<p><a href="http://www.loeildechat.ca/" target="_blank">L'Oeil de Chat</p>
 			</div>
 				
 			<div class="footerRightSection">

@@ -1,10 +1,12 @@
 ﻿<article>
-			
-	<h1>Inscriptions</h1>
+
+	<div class="txt-align-center">
+		<h1>Inscriptions</h1>
+	</div>
 	
-	<div id="inscription-teamlist">
+	<div id="inscription-teamlist" class="col-10">
 		<h3>League of Legends</h3>
-		<table id="league" border="1">
+		<table id="league">
 			<tr id="league-header">
 				<th>Nom</th>
 				<th>Pays</th>
@@ -14,7 +16,7 @@
 			</tr>
 		</table>
 		<h3>Counter Strike : Global Offensive</h3>
-		<table id="csgo" border="1">
+		<table id="csgo">
 			<tr>
 				<th>Nom</th>
 				<th>Pays</th>
@@ -24,14 +26,14 @@
 			</tr>
 		</table>
 		<h3>Super Smash Brothers : Melee</h3>
-		<table id="melee" border="1">
+		<table id="melee">
 			<tr>
 				<th>Nom</th>
 				<th>Pays</th>
 			</tr>
 		</table>
 		<h3>Rocket League</h3>
-		<table id="rocket" border="1">
+		<table id="rocket">
 			<tr>
 				<th>Nom</th>
 				<th>Pays</th>
@@ -42,8 +44,8 @@
 		</table>
 	</div>
 	
-	<div id="inscription-form">
-		<h1>Vous inscrire</h1>
+	<div class="form">
+		<h1 id="inscription-anchor">Vous inscrire</h1>
 		<form name="inscription" method="post">
 			<label for="game">Jeu : </label>
 			<select name="game" id="game">
@@ -112,6 +114,7 @@
 			<label for="website">Site Web : </label> <input name="website" id="website" type="text"> <br/>
 			<br/>
 			<input type="submit" value="Envoyer" onclick="addNewTeam();"/>
+			<div><!-- Padding div --></div>
 		</form>
 	</div>
 			

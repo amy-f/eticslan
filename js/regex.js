@@ -2,6 +2,7 @@
  * Created by Amélie on 2016-04-08.
  */
 
+//Ordre des regex :
 var regexes = [
     /^(?:[(]\d{3}[)][ ]?\d{3}[-.]|\d{3}([-.])\d{3}\1)\d{4}$/,
         /^[A-Z]\d[A-Z][ -]?\d[A-Z]\d$/,
@@ -30,7 +31,7 @@ function validate() {
 
     //Si l'une des valeurs est non valide, affiche une alerte ou redirige vers une autre page
     if (invalidCounter > 0) {
-        alert("Au moins l'un de vos champs est invalide : \n" + champsErrones);
+        alert("Les champs suivants sont invalides : \n" + champsErrones);
         return false;
     }
     else {
@@ -52,21 +53,10 @@ function validateElementOnBlur(regexIndex, elementID) {
         newColor = "#ffb3b3";
 
         //Si non valide, affiche en plus les exemples possibles en saisie à côté de la zone de texte
-        //uniquement s'il n'y a rien à côté.
-        //TODO: S'arranger pour qu'il se répète pas deux fois. Parce que sérieux c'est vraiment gossant.
 
         var examples = getInputExamples(elementID);
-        var exampleList = document.createTextNode("  Exemples : " + examples);
-        var span = document.createElement("span");
-        span.style.fontSize = "8pt";
-        span.style.color = "red";
-        span.appendChild(exampleList);
-        document.getElementById(elementID).parentNode.insertBefore(span, document.getElementById(elementID).nextSibling);
-
-        //Donne le focus sur la zone de texte en erreur
-        //TODO: Déboguer. Ça ne marche pas correctement. Une histoire de timer lié à cela??
-        document.getElementById(elementID).select();
-        document.getElementById(elementID).focus();
+        var exampleElementID = "example-" + elementID;
+        document.getElementById(exampleElementID).innerHTML = examples;
     }
 
     document.getElementById(elementID).style.backgroundColor = newColor;

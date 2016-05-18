@@ -1,20 +1,18 @@
 ﻿/*Media CSS*/
 /***********/
 
-.col-1 {width: 8.33%;}
-.col-2 {width: 16.66%;}
-.col-3 {width: 25%;}
-.col-4 {width: 33.33%;}
-.col-5 {width: 41.66%;}
-.col-6 {width: 50%;}
-.col-7 {width: 58.33%;}
-.col-8 {width: 66.66%;}
-.col-9 {width: 75%;}
-.col-10{width: 83.33%;}
-.col-11{width: 91.66%;}
-.col-12{width: 100%;}
-
-
+.col-1 {width: 8.33%; visibility: visible;}
+.col-2 {width: 16.66%; visibility: visible;}
+.col-3 {width: 25%; visibility: visible;}
+.col-4 {width: 33.33%; visibility: visible;}
+.col-5 {width: 41.66%; visibility: visible;}
+.col-6 {width: 50%; visibility: visible;}
+.col-7 {width: 58.33%; visibility: visible;}
+.col-8 {width: 66.66%; visibility: visible;}
+.col-9 {width: 75%; visibility: visible;}
+.col-10{width: 83.33%; visibility: visible;}
+.col-11{width: 91.66%; visibility: visible;}
+.col-12{width: 100%; visibility: visible;}
 
 .lanLogo
 {
@@ -39,6 +37,20 @@
 a
 {
 	text-decoration: none;
+}
+
+article a, article a:visited,
+footer a, footer a:visited
+{
+	color: #FFFFFF;
+	-moz-transition: color 0.5s; /* Firefox */
+	-webkit-transition: color 0.5s; /* Safari + Chrome */
+	transition: color 0.5s;
+}
+
+article a:hover, article a:active,
+footer a:hover, footer a:active{
+	color: #00DBC4;
 }
 
 p {
@@ -287,6 +299,8 @@ article p {
 
 article > div {
 	padding-top:32px;
+	width:90%;
+	margin:auto;
 }
 	
 article > center > img, article > img
@@ -337,6 +351,8 @@ article > center > div:last-of-type
 	padding-top:32px;
 }
 
+/** Tournois CSS **/
+
 .tournament {
 	margin:auto;
 	width:90%;
@@ -350,16 +366,82 @@ article > center > div:last-of-type
 .tournament p:last-of-type {
 	padding-bottom: 32px;
 }
+
+/* Forms CSS */
+ /***********/
+form {
+	padding-top: 20px;
+	padding-bottom:32px;
+	color:#81807C;
+	font-family: 'Roboto', sans-serif;
+}
+
+input, textarea {
+	margin-top: 3px;
+	padding: 3px 1px;
+	font-family: 'Roboto', sans-serif;
+}
+
+label {
+	display: inline-block;
+	padding-right: 5px;
+	color:#81807C;
+}
+
+/* Table CSS */
+table {
+	padding-top: 20px;
+	padding-bottom:10px;
+	font-family: 'Roboto', sans-serif;
+	color:#81807C;
+}
+table th {
+	font-family: 'Arvo', serif;
+	color:#00DBC4;
+}
+
+table td, table th {
+	padding:2px;
+	border:solid 1px #81807C;
+}
 	
 /*Screen adjustements*/
 /*********************/
 @media only screen and (max-width: 800px)
 {
+	/*Keep visibility hidden for hamburger menu */
 	[class*="col-"] 
 	{
 		width: 100%;
 		visibility: hidden;
 	}
+
+	/* Responsive column layout settings. Visibility is true for this */
+	.col-1 {width: 8.33%; visibility: visible;}
+	.col-2 {width: 16.66%; visibility: visible;}
+	.col-3 {width: 25%; visibility: visible;}
+	.col-4 {width: 33.33%; visibility: visible;}
+	.col-5 {width: 41.66%; visibility: visible;}
+	.col-6 {width: 50%; visibility: visible;}
+	.col-7 {width: 58.33%; visibility: visible;}
+	.col-8 {width: 66.66%; visibility: visible;}
+	.col-9 {width: 75%; visibility: visible;}
+	.col-10{width: 83.33%; visibility: visible;}
+	.col-11{width: 91.66%; visibility: visible;}
+	.col-12{width: 100%; visibility: visible;}
+
+	.col-m-1 {width: 8.33%; visibility: visible;}
+	.col-m-2 {width: 16.66%; visibility: visible;}
+	.col-m-3 {width: 25%; visibility: visible;}
+	.col-m-4 {width: 33.33%; visibility: visible;}
+	.col-m-5 {width: 41.66%; visibility: visible;}
+	.col-m-6 {width: 50%; visibility: visible;}
+	.col-m-7 {width: 58.33%; visibility: visible;}
+	.col-m-8 {width: 66.66%; visibility: visible;}
+	.col-m-9 {width: 75%; visibility: visible;}
+	.col-m-10{width: 83.33%; visibility: visible;}
+	.col-m-11{width: 91.66%; visibility: visible;}
+	.col-m-12{width: 100%; visibility: visible;}
 	
 	/*Nav media modification*/
 	.navElement
