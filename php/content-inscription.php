@@ -3,8 +3,9 @@
 	<div class="txt-align-center">
 		<h1>Inscriptions</h1>
 	</div>
-	
+
 	<div id="inscription-teamlist" class="col-10">
+		<p>Si vous souhaitez vous inscrire à un tournoi pour l'ÉTICS LAN 2016, c'est par <a href="#inscription-anchor">ici</a>.</p>
 		<h3>League of Legends</h3>
 		<table id="league">
 			<tr id="league-header">

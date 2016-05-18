@@ -7,7 +7,7 @@
  */
 
 //Check if POST array is not empty. If yes, show the user's name on the page.
-//TODO: Add mailto handler if there is time.
+//TODO: Add mailto handler if there is time + Add CAPTCHA support.
 if (!empty($_POST) || isset($_POST)) {
     $message = "Merci " . $_POST['name'] . " de votre intérêt pour l'ÉTICS LAN. Nous vous répondrons sous peu.";
 }

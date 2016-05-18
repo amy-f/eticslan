@@ -8,5 +8,7 @@
 ?>
 
 <article>
-    <p><?php echo $message;?></p>
+    <div>
+        <p><?php echo $message;?></p>
+    </div>
 </article>

@@ -19,12 +19,6 @@
 	width: 20%;
 }
 
-
-
-
-
-
-
 /*General CSS*/
 /************/
 *
@@ -276,6 +270,9 @@ article
 	margin-right:10%;
 	margin-top:35px;
 	border-radius:3px;
+	box-shadow: 1px 1px 10px #00DBC4;
+	-webkit-box-shadow: 1px 1px 10px #00DBC4;
+	-moz-box-shadow: 1px 1px 10px #00DBC4;
 }
 
 .counddownHeader > p
@@ -351,8 +348,14 @@ article > center > div:last-of-type
 	padding-top:32px;
 }
 
-/** Tournois CSS **/
+/** Google Map CSS **/
+.google-map iframe {
+	padding-top:5px;
+	padding-bottom: 32px;
+}
 
+/** Tournois CSS **/
+/******************/
 .tournament {
 	margin:auto;
 	width:90%;
@@ -376,7 +379,7 @@ form {
 	font-family: 'Roboto', sans-serif;
 }
 
-input, textarea {
+input, textarea, select {
 	margin-top: 3px;
 	padding: 3px 1px;
 	font-family: 'Roboto', sans-serif;
@@ -386,6 +389,11 @@ label {
 	display: inline-block;
 	padding-right: 5px;
 	color:#81807C;
+}
+
+form span {
+	font-size:8pt;
+	color:hotpink;
 }
 
 /* Table CSS */
@@ -403,6 +411,9 @@ table th {
 table td, table th {
 	padding:2px;
 	border:solid 1px #81807C;
+}
+table ul {
+	list-style-type: none;
 }
 	
 /*Screen adjustements*/

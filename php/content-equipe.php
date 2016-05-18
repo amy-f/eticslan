@@ -1,6 +1,8 @@
 <article>
 			
-	<h1>Tournois</h1>
+	<div class="txt-align-center">
+		<h1>Équipe</h1>
+	</div>
 			
 	<div class="tournament">
 		<h3>League of Legends</h3>

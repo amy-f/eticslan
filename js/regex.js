@@ -2,15 +2,15 @@
  * Created by Amélie on 2016-04-08.
  */
 
-//Ordre des regex :
+//Ordre des regex : date, email, telephone, code postal, nas, site Web, nombre décimal
 var regexes = [
-    /^(?:[(]\d{3}[)][ ]?\d{3}[-.]|\d{3}([-.])\d{3}\1)\d{4}$/,
-        /^[A-Z]\d[A-Z][ -]?\d[A-Z]\d$/,
-        /^\d{4}([-/])\d{1,2}\1\d{1,2}$/,
-        /^\d{3}([- ]?)\d{3}\1\d{3}$/,
-        /^\w+[@][a-z]+[.]\w+([.]\w+)$?/,
-        /^\w+:\/\/\w+((.\w+)+)((\/\w+)+)?((.\w+)+)?$/,
-        /^\d+[,.]\d+$/
+    /^((19[0-9][0-9])|(20[0-9][0-9]))[-/]((1[0-2])|(0[1-9]))[-/](([1-3][0-9])|(0[1-9]))|(([1-3][0-9])|((0[1-9])|[1-9])) (janvier|février|mars|avril|mai|juin|juillet|août|septembre|octobre|novembre|décembre) ((19[0-9][0-9])|(20[0-9][0-9]))$/,
+        /^.+@((((([12][0-5][0-5])|(\d\d)|\d)\.){3}(([12][0-5][0-5])|(\d\d)|\d))|([A-Za-z]+(\.[A-Za-z]+)+))$/,
+        /^\(\d{3}\) ?\d{3}(?:-|\.)\d{4}|\d{3}(-|\.)\d{3}\1\d{4}|\d{3}(?:-|\.)\d{4}$/,
+        /^[A-Z,a-z]\d[A-Z,a-z](-| )?\d[A-Z,a-z]\d$/,
+        /^(\d{3}[ -]?){2}\d{3}$/,
+        /^\w+:\/\/((www\.)?\w+\.([A-Z,a-z]+\.)*[A-Z,a-z]+|((([12][0-5][0-5])|(\d\d)|\d)\.){3}(([12][0-5][0-5])|(\d\d)|\d))$/,
+        /^[+\-]?((\d+\.)|\.)?\d+$/
 ];
 
 //Retourne vrai et soumet le formulaire si réussi
@@ -21,7 +21,7 @@ function validate() {
     var inputs = document.getElementsByTagName("input");
     var invalidCounter = 0;
     var champsErrones = "";
-    for (var i = 0; i < (inputs.length - 1); i++) {
+    for (var i = 1; i < (inputs.length - 1); i++) {
         if (!validateElementOnSubmit(regexes[i], inputs[i].id)) {
             invalidCounter++;
             champsErrones += getInvalidFieldName(inputs[i].id);
@@ -46,17 +46,16 @@ function validateElementOnBlur(regexIndex, elementID) {
 
     //Change la couleur de la textbox
     var newColor;
+    var exampleElementID = "example-" + elementID;
     if (regexes[regexIndex].test(document.getElementById(elementID).value)) {
         newColor = "#b3ffb3";
+        document.getElementById(exampleElementID).innerHTML = "";
     }
     else {
         newColor = "#ffb3b3";
 
         //Si non valide, affiche en plus les exemples possibles en saisie à côté de la zone de texte
-
-        var examples = getInputExamples(elementID);
-        var exampleElementID = "example-" + elementID;
-        document.getElementById(exampleElementID).innerHTML = examples;
+        document.getElementById(exampleElementID).innerHTML = getInputExamples(elementID);
     }
 
     document.getElementById(elementID).style.backgroundColor = newColor;
@@ -74,22 +73,22 @@ function getInputExamples(elementID) {
     var examples;
     switch (elementID) {
         case "telephone":
-            examples = "(999) 999-9999, (999)999-9999, 999-999-9999, 999.999.9999, (999) 999.9999, (999)999-9999";
+            examples = "(999) 999-9999, (999)999-9999, (999) 999.9999, (999)999.9999, 999.999.9999, 999-999-9999, 999.9999, 999-9999";
             break;
         case "codepostal":
             examples = "A9A 9A9, A9A9A9, A9A-9A9";
             break;
         case "date":
-            examples = "AAAA/MM/JJ, AAAA-MM-JJ";
+            examples = "AAAA-MM-JJ, AAAA/MM/JJ, J MMMM AAAA, JJ MMMM AAAA";
             break;
         case "nas":
-            examples = "999999999, 999 999 999";
+            examples = "999999999, 999 999 999, 999-999-999";
             break;
-        case "courriel":
-            examples = "compte@domaine.com";
+        case "email":
+            examples = "compte@domaine.com, compte@255.255.255.0";
             break;
-        case "url":
-            examples = "http://domaine.com, http://www.example.com";
+        case "website":
+            examples = "protocole://adresse";
             break;
         case "decimal":
             examples = "3,11, 3.11";
@@ -114,10 +113,10 @@ function getInvalidFieldName(elementID) {
         case "nas":
             fieldName = "NAS";
             break;
-        case "courriel":
+        case "contact-email":
             fieldName = "Courriel";
             break;
-        case "url":
+        case "contact-website":
             fieldName = "Site web";
             break;
         case "decimal":
