@@ -392,6 +392,21 @@ article > center > div:last-of-type
 	padding-top:32px;
 }
 
+/** Page À propos **/
+/*******************/
+#columns {
+	padding-top: 10px;
+	font-family: 'Roboto', sans-serif;
+	color: #81807C;
+	-webkit-column-count: 3; /* Chrome, Safari, Opera */
+	-moz-column-count: 3; /* Firefox */
+	column-count: 3;
+}
+
+#columns h3 {
+	padding: 5px 0;
+}
+
 /** Google Map CSS **/
 /********************/
  .google-maps {
@@ -613,5 +628,15 @@ table ul {
 	.counddownHeader > div
 	{
 		display:block;
+	}
+
+	/* Column modification */
+	#columns {
+		padding-top: 10px;
+		font-family: 'Roboto', sans-serif;
+		color: #81807C;
+		-webkit-column-count: 1; /* Chrome, Safari, Opera */
+		-moz-column-count: 1; /* Firefox */
+		column-count: 1;
 	}
 }
