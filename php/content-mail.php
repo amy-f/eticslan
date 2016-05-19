@@ -8,7 +8,9 @@
 ?>
 
 <article>
-    <div>
+    <div class="col-11">
         <p><?php echo $message;?></p>
     </div>
+    <!-- Padding pour ne pas couper l'image -->
+    <div style="height:35px;"></div>
 </article>

@@ -13,7 +13,7 @@
 		<div class="clear"></div>
 	
 	<div class="txt-align-left">
-		<img src="img/smashball.png" class="float-right col-3 col-m-12 grayscale"/>
+		<img src="img/smashball.png" class="float-right col-2 col-m-12 grayscale"/>
 		<h3>Super Smash Bros. Melee (2014-2016)</h3>
 		<p>Ce n'est pas parce qu'il y a Mario et Pikachu dedans que ce jeu ne peut être compétitif: au contraire, Super Smash Bros. Melee domine la scène compétitive des jeux de combat depuis 2002. Les combats suivront le format stardard 1v1, en élimination simple, et ne permettront pas l'usage des objets. N'oubliez pas vos manettes!</p>
 	</div>
@@ -27,7 +27,7 @@
 		<div class="clear"></div>
 
 	<div class="txt-align-left">
-		<img src="img/rl_shield_logo.png" class="float-right col-3 col-m-12 grayscale"/>
+		<img src="img/rl_shield_logo.png" class="float-right col-2 col-m-12 grayscale"/>
 		<h3>Rocket League (2016)</h3>
 		<p>Du nouveau cette année à l'ÉTICS LAN, Rocket League combine les meilleurs aspects du jeu de course et du soccer pour créer des matchs  endiablés et plein de rebondissements! Les matchs de ce tournoi mettront face à face 2 équipes de 3 joueurs: le premier à gagner 4 matchs sur une série de 7 passe à l'étape suivante. Venez avec votre équipe, ou si vous êtes seuls, laissez-nous la chance de créer un match parfait.</p>
 	</div>

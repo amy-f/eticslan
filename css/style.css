@@ -39,15 +39,23 @@ img {
 }
 
 .grayscale {
-	-webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
+	-webkit-filter: grayscale(100%);
+	-moz-filter: grayscale(100%);
 	filter: grayscale(100%);
-	-moz-transition: filter 0.5s; /* Firefox */
-	-webkit-transition: filter 0.5s; /* Safari + Chrome */
-	transition: filter 0.5s;
+	-o-filter: grayscale(100%);
+	-webkit-transition: all 0.6s ease-in-out;
+	-moz-transition: all 0.6s ease-in-out;
+	o-transition: all 0.6s ease-in-out;
+	transition: all 0.6s ease-in-out;
+	filter-transition: all 0.6s ease-in-out;
 }
 
 .grayscale:hover {
-	filter:none;
+	-webkit-filter: none;
+	-moz-filter:none;
+	-ms-filter: none;
+	-o-filter:none;
+	filter: none;
 }
 
 ul, ul li {
@@ -56,12 +64,12 @@ ul, ul li {
 
 .float-left {
 	float:left;
-	padding-right: 3px;
+	padding: 3px;
 }
 
 .float-right {
 	float:right;
-	padding-left: 3px;
+	padding: 3px;
 }
 
 .clear {
@@ -308,6 +316,7 @@ article
 	box-shadow: 1px 1px 10px #00DBC4;
 	-webkit-box-shadow: 1px 1px 10px #00DBC4;
 	-moz-box-shadow: 1px 1px 10px #00DBC4;
+	min-height: 120px;
 }
 
 .counddownHeader > p

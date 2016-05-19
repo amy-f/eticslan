@@ -163,38 +163,66 @@ function generateRocketEntry(team) {
 }
 
 //Ajoute une équipe dans le fichier XML
-//TODO: Prévoir validation des champs avant l'ajout
 function addNewTeam() {
+
+	var isValid = true;
 	var gameName = gameField.value;
-	switch(gameName) {
-		case "league":
-			addNewLeagueTeam();
-			break;
-		case "csgo":
-			addNewCSGOTeam();
-			break;
-		case "melee":
-			addNewMeleeTeam();
-			break;
-		case "rocket":
-			addNewRocketTeam();
-			break;
+	var alertMessage = "";
+
+	//Valider les champs
+	//Chaque inscription doit avoir au moins un membre inscrit et le pays.
+	var invalidMemberFields = 0;
+	for (var i = 0; i < member1Fields.length - 1; i++) {
+		if (member1Fields[i].value == "") {
+			invalidMemberFields++;
+		}
+	}
+	if (invalidMemberFields	> 0 || countryField.value == "") {
+		alertMessage += "Veuillez indiquer au minimum le nom d'un joueur participant ainsi que le pays.";
+		isValid = false;
 	}
 
-	//Sends file to the server
-	httpRequest.open("POST", "php/send-inscription.php", true);
-	httpRequest.setRequestHeader("Content-Type", "text/xml");
-	httpRequest.send(xmlDoc);
+	//Si le jeu n'est pas Melee, il faut aussi le nom d'équipe, le sponsor et le site Web
+	if (gameName != "melee" && (sponsorField.value == "" || websiteField.value == "" || teamNameField.value == "")) {
+		alertMessage += "Veuillez aussi indiquer votre commanditaire, votre site Web et votre nom d'équipe.";
+		isValid = false;
+	}
 
-	alert("Merci pour votre inscription à l'édition 2016 de l'ÉTICS LAN!");
-	location.reload(true); 	//rafraichit la page
+	if (isValid) {
+		//Si formulaire valide, ajouter l'équipe dans le fichier XML selon l'équipe choisie.
+		//Chauqe équipe peut gérer des informations différentes.
+		switch(gameName) {
+			case "league":
+				addNewLeagueTeam();
+				break;
+			case "csgo":
+				addNewCSGOTeam();
+				break;
+			case "melee":
+				addNewMeleeTeam();
+				break;
+			case "rocket":
+				addNewRocketTeam();
+				break;
+		}
+
+		//Sends file to the server
+		httpRequest.open("POST", "php/send-inscription.php", true);
+		httpRequest.setRequestHeader("Content-Type", "text/xml");
+		httpRequest.send(xmlDoc);
+
+		alert("Merci pour votre inscription à l'édition 2016 de l'ÉTICS LAN!");
+		location.reload(true); 	//rafraichit la page
+	}
+	else {
+		alert(alertMessage);
+	}
 }
 
 //Gère l'ajout d'une équipe de League of Legends
 function addNewLeagueTeam() {
 
 	//Creates a new team node
-	var currentTeamList = xmlDoc.getElementsByTagName("team");
 	var teamNode = xmlDoc.createElement("team");
 
 	//Creates team settings
