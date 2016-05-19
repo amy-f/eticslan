@@ -6,8 +6,8 @@
 		<h1>Formulaire de contact</h1>
 		<p>Vous pouvez remplir ce formulaire pour toutes questions, commentaires ou suggestions pour les LAN prochains et futurs. Veuillez laisser vos informations, et un organisateur vous répondra sous peu. <br/>
 		Les champs suivis d'un * sont requis.</p>
-			<form name="contact" action="../send_mail.php" method="post">
-				<label for="name" class="col-3 col-m-4">Nom : </label><input name="name" id="name" type="text" class="col-5 col-m-7" /> * <br/> <span id="example-name"></span><br/>
+			<form name="contact" id="contact" action="send_mail.php" method="post">
+				<label for="name" class="col-3 col-m-4">Nom : </label><input name="name" id="name" type="text" class="col-5 col-m-7" onblur="validateIfEmptyOnBlur('name')"/> * <br/> <span id="example-name"></span><br/>
 				<label for="date" class="col-3 col-m-4">Date : </label><input name="date" id="date" type="text" class="col-5 col-m-7" onblur="validateElementOnBlur(0, 'date')"/> * <br/> <span id="example-date"></span> <br/>
 				<label for="email" class="col-3 col-m-4">Courriel : </label><input name="email" id="email" type="text" class="col-5 col-m-7" onblur="validateElementOnBlur(1, 'email')"/> * <br/> <span id="example-email"></span><br/>
 				<label for="telephone" class="col-3 col-m-4">Téléphone : </label><input name="telephone" id="telephone" type="text" class="col-5 col-m-7" onblur="validateElementOnBlur(2, 'telephone')"/> * <br/> <span id="example-telephone"></span><br/>
@@ -16,8 +16,8 @@
 				<label for="website" class="col-3 col-m-4">Site Web : </label><input name="website" id="website" type="text" class="col-5 col-m-7" onblur="validateElementOnBlur(5, 'website')"/> * <br/> <span id="example-website"></span> <br/>
 				<label for="decimal" class="col-3 col-m-4">Saissisez un nombre décimal : </label><input name="decimal" id="decimal" type="text" class="col-5 col-m-7" onblur="validateElementOnBlur(6, 'decimal')"/> * <br/> <span id="example-decimal"></span><br/>
 										<label for="message" class="col-3 col-m-4">Message : </label> <br/>
-				<textarea name="message" id="message" form="contact" class="col-8 col-m-11" rows="10"></textarea> * <br/>
-				<input type="submit" value="Envoyer" onclick="validate()"/>
+				<textarea name="message" id="message" form="contact" class="col-8 col-m-11" rows="10" onblur="validateIfEmptyOnBlur('message')"></textarea> * <br/>
+				<input type="button" value="Envoyer" onclick="validate()"/>
 				<div><!-- Padding div --></div>
 			</form>
 		<div class="col-11">

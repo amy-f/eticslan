@@ -21,8 +21,19 @@ function validate() {
     var inputs = document.getElementsByTagName("input");
     var invalidCounter = 0;
     var champsErrones = "";
+
+    //Vérifie si les champs Nom et Message sont vides
+    if (document.getElementById("name").value == "") {
+        champsErrones += "Nom ";
+    }
+
+    if (document.getElementById("message").value == "") {
+        champsErrones += "Message "
+    }
+
+    //Vérifie les valeurs des regex
     for (var i = 1; i < (inputs.length - 1); i++) {
-        if (!validateElementOnSubmit(regexes[i], inputs[i].id)) {
+        if (!validateElementOnSubmit(regexes[(i - 1)], inputs[i].id)) {
             invalidCounter++;
             champsErrones += getInvalidFieldName(inputs[i].id);
             champsErrones += " ";
@@ -35,10 +46,23 @@ function validate() {
         return false;
     }
     else {
-        alert("Formulaire envoyé.");
+        document.getElementById("contact").submit();
         return true;
     }
 
+}
+//Valide si un élément est vide ou non lorsque l'on perd le focus
+function validateIfEmptyOnBlur(elementID) {
+    //Change la couleur de la textbox
+    var newColor;
+    if (document.getElementById(elementID).value != "") {
+        newColor = "#b3ffb3";
+    }
+    else {
+        newColor = "#ffb3b3";
+    }
+
+    document.getElementById(elementID).style.backgroundColor = newColor;
 }
 
 //Valide un élément une fois le focus sorti de la zone de texte.
@@ -91,7 +115,7 @@ function getInputExamples(elementID) {
             examples = "protocole://adresse";
             break;
         case "decimal":
-            examples = "3,11, 3.11";
+            examples = "999, 3.11";
             break;
     }
     return examples;
@@ -113,10 +137,10 @@ function getInvalidFieldName(elementID) {
         case "nas":
             fieldName = "NAS";
             break;
-        case "contact-email":
+        case "email":
             fieldName = "Courriel";
             break;
-        case "contact-website":
+        case "website":
             fieldName = "Site web";
             break;
         case "decimal":
